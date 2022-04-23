@@ -1,0 +1,149 @@
+    <table cellpadding="0" cellspacing="0" style="padding-left: 13px" border="0">
+        <tr>
+            <td style="padding-right:9px;">
+                <table align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <a target="_blank" href="{{department.website}}">
+                                <img border="0" alt="ironSource" border="0" height="31" ng-src="{{logoBase}}{{department.logo}}"/>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td valign="top">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="height: 15px;">
+                            <div ng-style="getColor(department.colors[0])"
+                                 style="white-space: nowrap; font-family: Courier; font-weight:bold; font-size:12px;">
+                                {{userInfo.name}}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 15px;">
+                            <div ng-style="getColor(department.colors[0])"
+                                 style="white-space: nowrap; font-family: Courier; font-size:11px;">
+                                {{userInfo.title}}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td valign="top" style="padding-left: 33px">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="height: 15px;">
+                            <div ng-show="userInfo.email" ng-style="getColor(department.colors[1])"
+                                 style="white-space: nowrap; font-family: Courier; float:left; clear:both; font-size:11px; text-decoration:none;">
+                                E: <a ng-style="getColor(department.colors[1])" ng-href="mailto:{{userInfo.email}}"
+                                      class="textCol2 textCol" id="Email" style="font-size: 11px;">{{userInfo.email}}</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 15px;">
+                            <div ng-show="userInfo.phone" ng-style="getColor(department.colors[1])"
+                                 style="white-space: nowrap; font-family: Courier; float:left; font-size:11px;">
+                                M: <span style="font-size: 11px;">{{userInfo.phone}}</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td valign="top" style="padding-left: 33px">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="height: 15px;">
+                            <div ng-show="userInfo.fax" ng-style="getColor(department.colors[2])"
+                                 style="white-space: nowrap; font-family: Courier; float:left; clear:both; font-size:11px;">
+                                F: <span style="font-size: 11px;">{{userInfo.fax}}</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 15px;">
+                            <div ng-show="userInfo.skype" ng-style="getColor(department.colors[2])"
+                                 style="white-space: nowrap; font-family: Courier; float:left; font-size:11px;">Skype:
+                                <span style="font-size: 11px;">{{userInfo.skype}}</span></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td valign="top" style="padding-left: 33px">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="height: 17px;" valign="top">
+                            <div ng-style="getColor(department.colors[3])"
+                                 style="font-family: Courier; float:left; font-size:11px; font-size: 11px;">www:
+                                <a ng-style="getColor(department.colors[3])" href="{{data[0].website}}"
+                                   style="font-size: 11px;">ironsrc.com</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 17px;" valign="top">
+                            <div ng-hide="department.depName == 'ironSource'" ng-style="getColor(department.colors[3])"
+                                 style="font-family: Courier; float:left; font-size:11px; font-size: 11px;">www:
+                                <a ng-style="getColor(department.colors[3])" href="{{department.website}}"
+                                   style="font-size: 11px;">{{department.websiteNoPrefix}}</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table cellpadding="0" cellspacing="0" style="padding-left: 13px; padding-top:20px;" border="0">
+        <tr>
+            <td>
+                <div style="font-size:10px; color:#B3B3B3; font-family: arial; max-width: 800px;"><i>This email (including any attachments)
+                    is for the sole use of the intended recipient and may contain confidential information which may be
+                    protected by legal privilege. If you are not the intended recipient, or the employee or agent
+                    responsible for delivering it to the intended recipient, you are hereby notified that any use,
+                    dissemination, distribution or copying of this communication and/or its content is strictly
+                    prohibited. If you are not the intended recipient, please immediately notify us by reply email or by
+                    telephone, delete this email and destroy any copies. Thank you.</i></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="padding-top: 20px">
+                <table border="0" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td ng-if="department.linkedin">
+                            <div id="Linkedin">
+                                <a href="{{department.linkedin}}" target="_blank">
+                                    <img border="0" alt="linkedin"
+                                         style="float:left; margin:2px"
+                                         ng-src="{{logoBase}}li.png"/>
+                                </a>
+                            </div>
+                        </td>
+                        <td ng-if="department.facebook">
+                            <div id="Facebook">
+                                <a href="{{department.facebook}}" target="_blank">
+                                    <img border="0" alt="facebook"
+                                         style="float:left; margin:2px"
+                                         ng-src="{{logoBase}}fb.png"/>
+                                </a>
+                            </div>
+                        </td>
+                        <td ng-if="department.twitter">
+                            <div id="Twitter">
+                                <a href="{{department.twitter}}" target="_blank">
+                                    <img border="0" alt="twitter"
+                                         style="float:left; margin:2px"
+                                         ng-src="{{logoBase}}tw.png"/>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>

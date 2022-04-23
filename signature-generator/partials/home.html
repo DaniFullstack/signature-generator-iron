@@ -1,0 +1,133 @@
+<div id="overlay"></div>
+<div id="wrapper">
+    <a id="support" href="mailto:support@ironsrc.com">Need help?&nbsp;&nbsp;:)</a>
+    <div id="message">
+        <h1>Please fill in your details</h1>
+        <p>
+        <ol>
+            <li>Fill in your details as you wish them to appear in your signature</li>
+            <li>The company LinkedIn is the default. Keep as is, replace with your own, or leave blank (The icon
+                will only appear if an address is provided)
+            </li>
+            <li>If you are including an international format mobile number, change the default fax to +972-775448273
+                to match
+            </li>
+            <li> Copy and paste the generated signature below into the signature box in your Gmail settings & save
+                changes
+            </li>
+        </ol>
+        </p>
+    </div>
+
+    <div id="form">
+        <input placeholder="Your name" ng-model="userInfo.name"/>
+
+        <input placeholder="Title" ng-model="userInfo.title"/>
+
+        <select ng-change="changedepartment(department)" ng-model="userInfo.office"
+            ng-options="office.name for office in addresses track by office.name"></select>
+        {{office.addr}}
+
+        <select ng-model="userInfo.webSite">
+            <option ng-repeat="site in data track by $index" ng-selected="$index === 0" value="{{$index}}">
+                {{site.depName}}</option>
+        </select>
+
+
+        <input placeholder="Phone" ng-model="userInfo.phone"/>
+        <input placeholder="Email" ng-model="userInfo.email"/>
+
+        <input placeholder="Fax" ng-model="userInfo.fax"/>
+        <input placeholder="Skypename" ng-model="userInfo.skype"/>
+        <input placeholder="QQ" ng-model="userInfo.qq"/>
+        <input placeholder="WeChat" ng-model="userInfo.wechat"/>
+
+        <button id="copy-btn" data-clipboard-target="signature" title="Click to copy me.">Copy to Clipboard</button>
+
+        <div id="copy-success">Signature Copied to Clipbord</div>
+    </div>
+
+    <div id="signature" style="font-family: Courier; color:#1D1735; font-size: 11px; direction:ltr; align:left;">
+        <table class="tg"
+            style="color: #010F13; font-family: 'Courier New', Courier, Arial; font-weight: normal; line-height: 18px; font-size: 12px; color:#101026;">
+            <tr>
+                <td style="padding: 5px 0 2px; font-size: 14px; line-height: 16px; color:#010F13;">
+                    <span
+                        style="font-family: Helvetica, Arial; letter-spacing:0.2px; font-size: 13px; color: #747474; font-weight: bold;">{{userInfo.name
+                        ? userInfo.name : 'Clark Kent'}}</span><br />
+                    <span
+                        style="font-family: Helvetica, Arial; letter-spacing:0.2px; font-size: 12px; color: #989898;">{{userInfo.title
+                        ? userInfo.title : 'Superman'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0 4px; text-align: left;">
+                    <a target="_blank" href="http://{{data[userInfo.webSite.link]}}" style=""
+                        title="{{data[userInfo.webSite].depName}}">
+                        <img width="auto" border="0" alt="{{data[userInfo.webSite].depName}}"
+                            style="{{data[userInfo.webSite].logoHeight}}vertical-align: top;" border="0"
+                            ng-src="{{logoBase}}logos/{{data[userInfo.webSite].logo}}.{{userInfo.logo}}"/>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 4px 0 2px;line-height: 19px;">
+                    <div style="font-family: Helvetica, Arial;" ng-if="userInfo.email" class="user-info-row"><span
+                            style="color: #747474; font-weight: bold;">email</span> <a href="mailto:{{userInfo.email}}"
+                            style="color:#989898 !important; text-decoration:none;">{{userInfo.email}}</a></div>
+                    <div style="font-family: Helvetica, Arial;" ng-if="userInfo.phone" class="user-info-row"><span
+                            style="color: #747474; font-weight: bold;">mobile</span> <a
+                            ng-href="tel:{{userInfo.phone ? userInfo.phone : '+972-54-1234567'}}"
+                            style="color: #989898 !important;">{{userInfo.phone ? userInfo.phone :
+                            '+972-54-1234567'}}</a></div>
+                    <div style="font-family: Helvetica, Arial;" ng-if="userInfo.fax" class="user-info-row"><span
+                            style="color: #747474; font-weight: bold;">fax</span> <a
+                            ng-href="fax:{{userInfo.fax ? userInfo.fax : '+972-77-5448273'}}"
+                            style="color: #989898 !important;">{{userInfo.fax ? userInfo.fax : '+972-77-5448273'}}</a>
+                    </div>
+                    <div style="font-family: Helvetica, Arial;" ng-if="userInfo.skype" class="user-info-row"><span
+                            style="color: #747474; font-weight: bold;">skype</span> <span
+                            style="color: #989898;">{{userInfo.skype ? userInfo.skype : 'louislane'}}</span></div>
+                    <div style="font-family: Helvetica, Arial;" ng-if="userInfo.qq" class="user-info-row"><span
+                            style="color: #747474; font-weight: bold;">QQ</span> <span
+                            style="color: #989898;">{{userInfo.qq ? userInfo.qq : ''}}</span></div>
+                    <div style="font-family: Helvetica, Arial;" ng-if="userInfo.wechat" class="user-info-row"><span
+                            style="color: #747474; font-weight: bold;">wechat</span> <span
+                            style="color: #989898;">{{userInfo.wechat ? userInfo.wechat : ''}}</span></div>
+                    <div style="font-family: Helvetica, Arial;max-width: 244px;" ng-if="userInfo.office"
+                        class="user-info-row address-row"><span style="color: #989898;">{{userInfo.office.addr ?
+                            userInfo.office.addr : ''}}</span></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 13px 0 0;">
+                    <div><a href="http://{{data[userInfo.webSite].link}}" target="_blank"
+                            style="font-family: Helvetica, Arial; color:#747474; font-weight: bold; text-decoration: none;">{{data[userInfo.webSite].link}}</a>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 2px 0;">
+                    <a ng-repeat="(key, social) in data[userInfo.webSite].social track by $index" href="{{social}}">
+                        <img height="21" border="0" alt="{{key}}" style="float:left; margin:2px 2px 2px 0"
+                            ng-src="{{logoBase}}{{key}}.png"/>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0;">
+                    <span
+                        style="color: #9B9AAA; font-family: Arial; font-size: 11px; display:inline-block; max-width: 90%;line-height:17px;">
+                        This email (including any attachments) is for the sole use of the intended recipient and may
+                        contain confidential information which may be protected by legal privilege. If you are not the
+                        intended recipient, or the employee or agent responsible for delivering it to the intended
+                        recipient, you are hereby notified that any use, dissemination, distribution or copying of this
+                        communication and/or its content is strictly prohibited. If you are not the intended recipient,
+                        please immediately notify us by reply email or by telephone, delete this email and destroy any
+                        copies. Thank you.
+                    </span>
+                </td>
+    </div>
+</div>
+<!--/#wrapper-->

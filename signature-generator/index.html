@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="signature">
+
+<head>
+    <title>ironSource Signature Generator</title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="lib/lodash-2-4-1.min.js"></script>
+    <script type="text/javascript" src="lib/idbstore.min.js"></script>
+
+    <script type="text/javascript" src="lib/angular-1.2.16.min.js"></script>
+    <script type="text/javascript" src="lib/angular-route.min.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/idb.service.js"></script>
+    
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/homeCtrl.js"></script>
+</head>
+<body>
+
+    <div ng-controller="HomeCtrl" ng-include="'partials/home.html'"></div>
+</body>
+</html>
