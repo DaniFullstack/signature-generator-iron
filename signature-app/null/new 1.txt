@@ -1,0 +1,37 @@
+              {formValues.companyName && (
+                <a href={formImg[formValues.companyName].fb}>
+                  <img
+                    src="https://s3.amazonaws.com/img.ironsrc/img/facebook.png"
+                    alt="social fb"
+                  />
+                </a>
+              )}
+              {formValues.companyName && (
+                <a href={formImg[formValues.companyName].tw}>
+                  <img
+                    src="https://s3.amazonaws.com/img.ironsrc/img/twitter.png"
+                    alt="social tw"
+                  />
+                </a>
+              
+			  
+			  
+			  
+			  
+			  
+			  
+			      {formValues.companyName && (
+					<a href={formImg[formValues.companyName].fb}>
+						<img
+						src="https://s3.amazonaws.com/img.ironsrc/img/facebook.png"
+						alt="social fb"
+					/>
+                </a>
+              )}
+              {formValues.companyName && (
+                <a href={formImg[formValues.companyName].tw}>
+                  <img
+                    src="https://s3.amazonaws.com/img.ironsrc/img/twitter.png"
+                    alt="social tw"
+                  />
+                </a>

@@ -1,0 +1,137 @@
+body {
+  background: #f1f1f2;
+  font-family: "Ubuntu", arial;
+  padding: 30px;
+}
+
+.page-header {
+  color: #0046af;
+}
+
+#signature-page {
+  background: #ffffff;
+  font-family: "Ubuntu", arial;
+  padding: 30px;
+}
+
+#intro {
+  color: rgb(49, 57, 71);
+  font-family: Ubuntu, arial;
+  margin: 0px 0px 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form-inputs input {
+  color: rgb(49, 57, 71);
+  font-family: Ubuntu, arial;
+  font-weight: 600;
+  margin: 0px 0px 10px;
+  padding: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(241, 241, 242);
+  background: rgb(255, 255, 255);
+  width: 280px;
+  box-sizing: border-box;
+}
+
+.location {
+  margin: 0px 0px 10px;
+}
+
+.company {
+  margin: 0px 0px 10px;
+}
+
+.signature-result {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#signature {
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  flex-direction: row;
+}
+
+#signature > div {
+  width: calc(100% / 2);
+
+  padding: 0 30px;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+.fullName {
+  font-family: Helvetica, Arial;
+  letter-spacing: 0.2px;
+  font-size: 15px;
+  color: #747474;
+  font-weight: bold;
+}
+
+.title {
+  font-family: Helvetica, Arial;
+  letter-spacing: 0.2px;
+  font-size: 13px;
+  color: #989898;
+}
+
+.location {
+  font-family: Helvetica, Arial;
+  letter-spacing: 0.2px;
+  font-size: 12px;
+  color: #989898;
+}
+
+tfoot {
+  color: #9b9aaa;
+  font-family: Arial;
+  font-size: 11px;
+  display: inline-block;
+  max-width: 90%;
+  line-height: 17px;
+}
+
+.companyIcon {
+  vertical-align: top;
+  padding: 10px 0 5px;
+  text-align: left;
+}
+
+.form-result-title {
+  color: #747474;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+span {
+  color: #989898;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+a {
+  font-family: Helvetica, Arial;
+  font-size: 12px;
+  color: #747474;
+  font-weight: bold;
+  text-decoration: none;
+}

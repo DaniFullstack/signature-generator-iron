@@ -1,0 +1,74 @@
+      <table style="color: #9B9AAA; font-family: Arial; letter-spacing:0.2px;">
+		<thead>
+			<tr>
+				<td> 
+				{+ formValues.fname +}
+				</td>
+			</tr>
+			<tr>
+				<td> 
+				{+ formValues.title +}
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+				<img src=" {+ formValues.companyName +} " alt="Company Logo" width="200" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span> {formValues.email && <span className="email">Email: </span> + formValues.email}</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="color: #747474; font-size: 11px; font-weight: bold;">Phone: </span>
+					<span style="color:#989898; font-size: 11px; !important;"> + formValues.phone +</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="color: #747474; font-size: 11px; font-weight: bold;">Fax: </span>
+					<span style="color:#989898; font-size: 11px; !important;"> + formValues.fax +</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="color: #747474; font-size: 11px; font-weight: bold;">Skype: </span>
+					<span style="color:#989898; font-size: 11px;"> +formValues.skype +</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="color: #747474; font-size: 11px; font-weight: bold;">QQ: </span>
+					<span style="color:#989898; font-size: 11px;"> + formValues.qq + </span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="color: #747474; font-size: 11px; font-weight: bold;">WeChat: </span>
+					<span style="color:#989898; font-size: 11px;"> + formValues.wechat +</span>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #747474; font-size: 11px;">
+					+ formValues.locations +
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td style="font-size: 11px; display:inline-block; max-width: 90%; line-height:17px;">
+					This email (including any attachments) is for the sole use of the intended recipient and may contain
+					confidential information which may be protected by legal privilege. If you are not the intended recipient,
+					or the employee or agent responsible for delivering it to the intended recipient, you are hereby notified
+					that any use, dissemination, distribution or copying of this communication and/or its content is strictly
+					prohibited. If you are not the intended recipient, please immediately notify us by reply email or by 
+					telephone, delete this email and destroy any copies. Thank you.
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+    );
